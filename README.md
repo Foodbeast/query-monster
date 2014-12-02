@@ -13,5 +13,14 @@ search.query = 'new items at "pizza hut"';
 var result = s.find();
 ```
 
+## Result ##
+```
+{ 
+  "query": "new items at \"pizza hut\"", 
+  "phrases": [ "pizza hut" ], 
+  "terms": [ "items" ] 
+}
+```
+
 ## Dependencies ##
 [lodash](https://github.com/lodash/lodash) for _.reject
