@@ -13,5 +13,5 @@ search.query = 'new items at "pizza hut"';
 var result = s.find();
 ```
 
-## Requirements ##
+## Dependencies ##
 [lodash](https://github.com/lodash/lodash) for _.reject

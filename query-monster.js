@@ -73,6 +73,7 @@ var QM = (function() {
       _buildQuery(this.query)
 
       return {
+        query: this.query,
         phrases: _phrases,
         terms: _terms
       };
