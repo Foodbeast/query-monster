@@ -8,11 +8,11 @@ Returns an array of terms, filtered for stopwords, and an array of exact phrases
 ## Usage ##
 
 ```javascript
-var search = QM;
+var monster = QM;
 
-search.query = 'new items at "pizza hut"';
+monster.query = 'new items at "pizza hut"';
 
-var result = search.find();
+var result = monster.crush();
 ```
 
 ## Result ##

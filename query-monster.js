@@ -68,7 +68,7 @@ var QM = (function() {
 
   return {
 
-    find: function() {
+    crush : function() {
 
       _buildQuery(this.query)
 
