@@ -12,7 +12,7 @@ var search = QM;
 
 search.query = 'new items at "pizza hut"';
 
-var result = s.find();
+var result = search.find();
 ```
 
 ## Result ##
