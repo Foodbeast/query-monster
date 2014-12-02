@@ -1,15 +1,21 @@
 <html>
 <head>
   <script src="query-monster.js"></script>
+  <script src="lodash.compat.min.js"></script>
 </head>
 <body>
+
+
 
 <script>
 var search = QM;
 
 search.query = 'new items at "pizza hut"';
 
-var result = s.find();
+var result = search.find();
+
+document.write(JSON.stringify(result, undefined, 2));
+
 </script>
 </body>
 </html>
