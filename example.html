@@ -5,17 +5,17 @@
 </head>
 <body>
 
-
-
 <script>
+var startTime = new Date().getTime();
 var search = QM;
 
-search.query = 'new items at "pizza hut"';
+search.query = 'New items at "pizza hut"';
 
 var result = search.find();
 
 document.write(JSON.stringify(result, undefined, 2));
-
+console.log(new Date().getTime() - startTime);
 </script>
+
 </body>
 </html>
