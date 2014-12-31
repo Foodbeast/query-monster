@@ -59,6 +59,11 @@ var QM = (function() {
     });
   }
 
+  function _cleanup() {
+    _terms = [];
+    _phrases = [];
+  }
+
   // Initialize the search
 
   function _buildQuery( query ) {
@@ -70,7 +75,8 @@ var QM = (function() {
 
     crush : function() {
 
-      _buildQuery(this.query)
+      _cleanup();
+      _buildQuery(this.query);
 
       return {
         query: this.query,
