@@ -4,6 +4,7 @@
   <style>
     body { text-align: center; padding:100px; }
     #search { margin:25px; padding:10px; font-size: 1.2em; outline: none; }
+    #result-box { width:400px; text-align: left; margin: 0 auto;}
   </style>
 </head>
 <body>
@@ -28,7 +29,7 @@ function updateResults() {
   var query = searchBox.value;
   var result = monsta.crush(query);
 
-  resultBox.innerHTML = JSON.stringify(result, null, 2);
+  resultBox.innerHTML = "<pre>" + JSON.stringify(result, null, 2) + "</pre>";
 }
 </script>
 

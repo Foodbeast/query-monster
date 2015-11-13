@@ -5,22 +5,44 @@ A simple tool for building search queries for Javascript on the client or server
 
 Returns an array of terms, filtered for stopwords, and an array of exact phrases from single or double quotes.
 
+## Installing ##
+
+```javascript
+npm i --save query-monster
+```
+
+## In Browser ##
+
+```javascript
+<script src="../dist/query-monster.js"></script>
+```
+
+## In Node ##
+
+```javascript
+var monsta = require('query-monster');
+```
+
 ## Usage ##
 
 ```javascript
 var monster = QM;
 
-monster.query = 'new items at "pizza hut"';
+var result monsta.crush('new habanero pizza at "pizza hut"');
 
-var result = monster.crush();
 ```
 
 ## Result ##
 ```
-{ 
-  "query": "new items at \"pizza hut\"", 
-  "phrases": [ "pizza hut" ], 
-  "terms": [ "items" ] 
+{
+  "query": "new habanero pizza at \"pizza hut\"",
+  "phrases": [
+    "pizza hut"
+  ],
+  "terms": [
+    "habanero",
+    "pizza"
+  ]
 }
 ```
 
