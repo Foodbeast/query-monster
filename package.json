@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "lab -a code -t 100 -L"
+    "test": "lab -a code -t 100 -L",
+    "dist": "browserify -s query-monster --bare lib/index.js > dist/query-monster.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,10 @@
   "homepage": "https://github.com/foodbeast/query-monster#readme",
   "dependencies": {
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "code": "^2.0.1",
+    "lab": "^7.3.0"
   }
 }
