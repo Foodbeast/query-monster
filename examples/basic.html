@@ -1,14 +1,35 @@
 <html>
 <head>
   <script src="../dist/query-monster.js"></script>
+  <style>
+    body { text-align: center; padding:100px; }
+    #search { margin:25px; padding:10px; font-size: 1.2em; outline: none; }
+  </style>
 </head>
 <body>
 
-<script>
-var search = queryMonster;
-var result = search.crush('New habanero pizzas at "pizza hut"');
+<h1>Query Monster</h1>
+<p>Start typing a query and see the results in real time</p>
 
-document.write(JSON.stringify(result, undefined, 2));
+<div class="search-box">
+  <input type="text" id="search" name="search" oninput="window.updateResults();">
+</div>
+
+<div id="result-box">
+</div>
+
+<script>
+var monsta = queryMonster;
+
+var searchBox = document.getElementById('search');
+var resultBox = document.getElementById('result-box');
+
+function updateResults() {
+  var query = searchBox.value;
+  var result = monsta.crush(query);
+
+  resultBox.innerHTML = JSON.stringify(result, null, 2);
+}
 </script>
 
 </body>

@@ -69,7 +69,8 @@ function _buildQuery( query ) {
 
 
 module.exports = function (query) {
-
+  _phrases = [];
+  _terms = [];
   _buildQuery(query)
 
   return {
