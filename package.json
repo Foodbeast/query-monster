@@ -1,0 +1,29 @@
+{
+  "name": "query-monster",
+  "version": "0.0.2",
+  "description": "A simple tool to build useful objects from search strings",
+  "main": "dist/query-monster.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "lab -a code -t 100 -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foodbeast/query-monster.git"
+  },
+  "keywords": [
+    "search",
+    "query"
+  ],
+  "author": "Rudy Chaney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foodbeast/query-monster/issues"
+  },
+  "homepage": "https://github.com/foodbeast/query-monster#readme",
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
