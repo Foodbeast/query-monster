@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "lab -a code -t 100 -L",
-    "dist": "browserify -s query-monster --bare lib/index.js > dist/query-monster.js"
+    "test": "mocha test/cli.js",
+    "build": "browserify -s query-monster --bare lib/index.js > dist/query-monster.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "browserify": "^12.0.1",
-    "code": "^2.0.1",
-    "lab": "^7.3.0"
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3"
   }
 }
