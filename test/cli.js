@@ -3,20 +3,38 @@ var expect = chai.expect;
 var should = chai.should();
 var queryMonster = require('../dist/query-monster');
 
-describe('Return Object', function() {
+describe('queryMonster.crush()', function() {
+
   it('Should never return undefined', function() {
-    expect(queryMonster.crush()).to.not.be.an('undefined');
+    var search = queryMonster.crush();
+    search.should.not.be.an('undefined');
   });
+
   it('Should always return an object', function() {
-    expect(queryMonster.crush()).to.be.an('object');
+    var search = queryMonster.crush();
+    search.should.be.an('Object');
   });
+
+  it('Should contain a query, phrases, and terms', function() {
+    var search = queryMonster.crush();
+    search.should.have.property('query');
+    search.should.have.property('phrases');
+    search.should.have.property('terms');
+  });
+
   it('Should always return .query as a string ', function() {
-    expect(queryMonster.crush().query).to.be.a('string');
+    var search = queryMonster.crush();
+    search.query.should.be.a('string');
   });
-  it('Should contain .phrases', function() {
-    expect(queryMonster.crush().phrases).to.be.ok;
+
+  it('Should remove duplicate phrases', function() {
+    var search = queryMonster.crush('"pizza hut" and "pizza hut"');
+    search.phrases.should.have.length.below(2);
   });
-  it('Should contain .terms', function() {
-    expect(queryMonster.crush().terms).to.be.ok;
+
+  it('Should remove duplicate terms', function() {
+    var search = queryMonster.crush('pizza pizza pizza');
+    search.terms.should.have.length.below(2);
   });
+
 });

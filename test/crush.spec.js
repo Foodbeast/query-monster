@@ -1,8 +1,7 @@
-var expect = chai.expect;
-var should = chai.should();
+var queryMonster = require('../dist/query-monster');
 
-describe('Return Object', function() {
-  
+describe('queryMonster.crush()', function() {
+
   it('Should never return undefined', function() {
     var search = queryMonster.crush();
     search.should.not.be.an('undefined');

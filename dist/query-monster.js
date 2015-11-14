@@ -55,6 +55,7 @@ function _stripPhrases() {
 function _setTerms() {
   _terms = _query.split(" ");
 
+  _terms = _.uniq(_terms);
   _terms = _.reject(_terms, function(word) {
     return _stopwords.indexOf(word) > -1;
   });
@@ -69,14 +70,16 @@ function _buildQuery( query ) {
 
 
 module.exports = function (query) {
+  var query = query || '';
+
   _phrases = [];
   _terms = [];
-  _buildQuery(query || '');
+  _buildQuery(query);
 
   return {
-    query: _query,
+    query: query,
     phrases: _phrases,
-    terms: _terms
+    terms: _.uniq(_terms)
   };
 
 }
