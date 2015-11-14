@@ -15,6 +15,9 @@ npm i --save query-monster
 
 ```javascript
 <script src="../dist/query-monster.js"></script>
+<script>
+  var monsta = queryMonster;
+</script>
 ```
 
 ## In Node ##
@@ -26,9 +29,8 @@ var monsta = require('query-monster');
 ## Usage ##
 
 ```javascript
-var monster = QM;
 
-var result monsta.crush('new habanero pizza at "pizza hut"');
+var result = monsta.crush('new habanero pizza at "pizza hut"');
 
 ```
 
