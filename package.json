@@ -9,8 +9,8 @@
   "scripts": {
     "test": "mocha test/cli.js",
     "build": "browserify -s query-monster --bare lib/index.js > dist/query-monster.js",
-    "preversion": "npm test",
-    "version": "npm run build && git add .",
+    "preversion": "npm run build && npm test",
+    "version": "git add .",
     "postversion": "git push && git push --tags"
   },
   "repository": {
