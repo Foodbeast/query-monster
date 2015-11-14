@@ -1,6 +1,8 @@
 query-monster
 =============
 
+[![Build Status](https://travis-ci.org/Foodbeast/query-monster.svg)](https://travis-ci.org/Foodbeast/query-monster)
+
 A simple tool for building search queries for Javascript on the client or server side.
 
 Returns an object containing terms, filtered for stopwords, and an array of exact phrases from single or double quotes.
