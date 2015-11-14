@@ -1,6 +1,6 @@
 {
   "name": "query-monster",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple tool to build useful objects from search strings",
   "main": "dist/query-monster.js",
   "directories": {
