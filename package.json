@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/foodbeast/query-monster#readme",
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "urldecode": "^1.0.1"
   },
   "devDependencies": {
     "browserify": "^12.0.1",
